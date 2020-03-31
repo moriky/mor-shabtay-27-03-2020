@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>home page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+</head>
+<body onload="onload()">
+<header>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="index.html">HeroloWeatherTask</a>
+
+    <div class="" id="">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="favorites.html">Favorites</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</header>
+<div class="content-wrap">
+  <div class="right-side">
+    <input id="search-city" onkeypress="onAddLetter(event)" type="text"  onkeyup="getSuggestions(this.value)" spellcheck="false">
+    <div class="suggestions"></div>
+    <div class="now-weather">
+      <div class="daytime-icon"></div>
+    </div>
+    <div class="today-wrap make-blur">
+      <div class="heart-wrap">
+        <div class="heart"></div>
+        <div class="heart-btn" onclick="addToFavorites()"></div>
+      </div>
+      <div class="time-icon night-icon"></div>
+      <div class="ttl">Now</div>
+      <div class="now-txt">cloudy with chance of meatballs</div>
+      <div class="time-icon"></div>
+      <div class="temp">
+        <p class="temp-big-num" id="now-temp">25°</p>
+        <p class="txt" id="precipitation">mostly showers</p>
+      </div>
+    </div>
+  </div>
+  <div class="left-side make-blur">
+    <div class="week-ttl">The Week</div>
+    <p class="week-Headline"></p>
+    <div class="week">
+      <div class="today-wrap" id="day0">
+        <div class="ttl" >Sun</div>
+        <div class="temp">
+          <p class="max-temp temp-big-num">25°</p>
+          <div class="horiz-slesh"></div>
+          <p class="min-temp temp-big-num">15°</p>
+        </div>
+        <div class="day-night-wrap">
+          <div class="day">
+            <div class="day-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+          <div class="night">
+            <div class="night-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="today-wrap" id="day1">
+        <div class="ttl" >Mon</div>
+        <div class="temp">
+          <p class="max-temp temp-big-num">25°</p>
+          <div class="horiz-slesh"></div>
+          <p class="min-temp temp-big-num">15°</p>
+        </div>
+        <div class="day-night-wrap">
+          <div class="day">
+            <div class="day-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+          <div class="night">
+            <div class="night-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="today-wrap" id="day2">
+        <div class="ttl" >Tue</div>
+        <div class="temp">
+          <p class="max-temp temp-big-num">25°</p>
+          <div class="horiz-slesh"></div>
+          <p class="min-temp temp-big-num">15°</p>
+        </div>
+        <div class="day-night-wrap">
+          <div class="day">
+            <div class="day-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+          <div class="night">
+            <div class="night-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="today-wrap" id="day3">
+        <div class="ttl" >Wed</div>
+        <div class="temp">
+          <p class="max-temp temp-big-num">25°</p>
+          <div class="horiz-slesh"></div>
+          <p class="min-temp temp-big-num">15°</p>
+        </div>
+        <div class="day-night-wrap">
+          <div class="day">
+            <div class="day-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+          <div class="night">
+            <div class="night-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="today-wrap" id="day4">
+        <div class="ttl" >Thu</div>
+        <div class="temp">
+          <p class="max-temp temp-big-num">25°</p>
+          <div class="horiz-slesh"></div>
+          <p class="min-temp temp-big-num">15°</p>
+        </div>
+        <div class="day-night-wrap">
+          <div class="day">
+            <div class="day-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+          <div class="night">
+            <div class="night-icon"></div>
+            <div class="ver-al-txt">
+              <p class="weather-txt">mostly showers</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+  <p></p>
+  <div class="api-logo"></div>
+</div>
+</body>
+</html>
