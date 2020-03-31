@@ -91,7 +91,7 @@ function getSuggestions(val){
     }
     return
   }
-  let URL = 'http://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey='+myKey+'&q='+ val +'&language=en';
+  let URL = 'https://dataservice.accuweather.com/locations/v1/cities/autocomplete?apikey='+myKey+'&q='+ val +'&language=en';
   loadData(URL,getCitiesByStr)
 }
 
@@ -103,12 +103,12 @@ function getUserGeoLocation() {
   }
 }
 function getPositionWeather(key){
-  let URL = 'http://dataservice.accuweather.com/currentconditions/v1/'+ key +'?apikey='+myKey+'&language=en&details=false';
+  let URL = 'https://dataservice.accuweather.com/currentconditions/v1/'+ key +'?apikey='+myKey+'&language=en&details=false';
   currentCityKey = key;
   loadData(URL,displayPositionInElements);
 }
 function getPositionfiveDaysWeather(key){
-  URL = 'http://dataservice.accuweather.com/forecasts/v1/daily/5day/'+ key +'?apikey='+myKey+'&language=en&details=false&metric=true';
+  URL = 'https://dataservice.accuweather.com/forecasts/v1/daily/5day/'+ key +'?apikey='+myKey+'&language=en&details=false&metric=true';
   loadData(URL,displayPositionInDaysElements);
 }
 displayPositionInDaysElements=function (fiveDaysWeather) {
@@ -159,7 +159,7 @@ setPositionData=function (position) {
 
 function setPosition(position) {
   let positionCoords = position.coords.latitude + '7%2C' + position.coords.longitude;
-  let URL = 'http://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey='+myKey+'&q='+ positionCoords +'&language=en&details=false&toplevel=true';
+  let URL = 'https://dataservice.accuweather.com/locations/v1/cities/geoposition/search?apikey='+myKey+'&q='+ positionCoords +'&language=en&details=false&toplevel=true';
   loadData(URL,setPositionData);
 }
 function addToFavorites() {
@@ -188,7 +188,7 @@ function getAllFavKeys() {
 }
 
 function getFavPositionWeather(key){
-  let URL = 'http://dataservice.accuweather.com/currentconditions/v1/'+ key +'?apikey='+myKey+'&language=en&details=false';
+  let URL = 'https://dataservice.accuweather.com/currentconditions/v1/'+ key +'?apikey='+myKey+'&language=en&details=false';
   loadData(URL,displayFavElements);
 }
 function displayFavElements(favWeather) {
