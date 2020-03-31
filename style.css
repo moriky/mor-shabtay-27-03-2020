@@ -67,6 +67,7 @@ textarea:focus, input:focus{
   align-items: stretch;
   align-content:stretch;
   padding: 0 1vw;
+  padding-bottom: 80px;
 }
 .right-side {
   width: 40%;
@@ -119,7 +120,7 @@ ul {
   color: #323232;
 }
 .suggestions .city-suggested {
-  font-size: 1.5vw;
+  font-size: 25px;
   color: #d8d8d8;
   display: inline-block;
   margin-right: 20px;
