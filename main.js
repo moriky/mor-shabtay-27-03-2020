@@ -1,4 +1,4 @@
-const myKey = "pSMPFMyMViRGToGAMe1KohkLBppGjGUB";
+const myKey = "IkAblbtxrC9jELoQNoBCrATM03SmrKIC";
 let currentCityKey = null;
 
 function onload(){
